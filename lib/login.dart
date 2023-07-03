@@ -44,9 +44,7 @@ Future<String?> login() async {
     );
 
     if (res.statusCode == 200) {
-      print(jsonDecode(res.body));
-      print(res.headers);
-      return res.headers['Set-Cookie']!.split(';').first;
+      return res.headers['set-cookie']!.split(';').first;
     } else {
       print('${res.statusCode}: ${res.reasonPhrase}');
       return null;

@@ -9,9 +9,9 @@ void main(List<String> arguments) async {
 
 Future<void> start(int sleepInMilliseconds) async {
   final cookies = await script.login();
-  // if (cookies == null) return start(sleepInMilliseconds);
-  // final isSuccess = await sendPassportRequest(cookies);
-  // if (isSuccess) exit(0);
-  // Timer(Duration(milliseconds: sleepInMilliseconds),
-  //     () => start(sleepInMilliseconds));
+  if (cookies == null) return start(sleepInMilliseconds);
+  final isSuccess = await sendPassportRequest(cookies);
+  if (isSuccess) exit(0);
+  Timer(Duration(milliseconds: sleepInMilliseconds),
+      () => start(sleepInMilliseconds));
 }
