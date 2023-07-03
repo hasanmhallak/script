@@ -35,6 +35,6 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: script
-          path: bin/script.dart        
+          name: script.exe
+          path: bin/script.exe        
       
