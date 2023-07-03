@@ -41,9 +41,10 @@ Future<String?> login() async {
   print('sending request..');
 
   try {
-    final res = await http.get(
+    final res = await http.post(
       Uri.parse('https://api.ecscsy.com:8080/secure/auth/login'),
       headers: loginHeaders,
+      body: loginPayload,
     );
 
     if (res.statusCode == 200) {
