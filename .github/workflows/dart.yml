@@ -6,15 +6,15 @@
 name: Dart
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  # push:
+  #   branches: [ "master" ]
+  # pull_request:
+  #   branches: [ "master" ]
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
@@ -32,10 +32,9 @@ jobs:
       # want to change this to 'flutter test'.
       - name: Compile exe
         run: dart compile exe bin/script.dart
-        
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: script.exe
-          path: bin/script.exe        
-      
+          path: bin/script.exe
