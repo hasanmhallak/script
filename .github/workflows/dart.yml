@@ -31,3 +31,10 @@ jobs:
       # want to change this to 'flutter test'.
       - name: Compile exe
         run: dart compile exe bin/script.dart
+        
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: script
+          path: bin/script.dart        
+      
