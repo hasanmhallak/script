@@ -82,11 +82,12 @@ Future<bool> sendPassportRequest(String cookies) async {
       return true;
     } else {
       print('${res.statusCode}: ${res.reasonPhrase}');
-      print(res.body);
+      print(utf8.decode(res.body.codeUnits));
       return false;
     }
   } catch (e) {
     print(e);
+
     return false;
   }
 }
