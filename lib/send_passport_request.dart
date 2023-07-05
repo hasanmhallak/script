@@ -40,7 +40,6 @@ Future<bool> sendPassportRequest(String cookies) async {
   };
 
   print('done!');
-  print(passportPayload);
   print('prepearing login header..');
   final reqHeaders = {
     'Accept': 'application/json, text/plain, */*',
