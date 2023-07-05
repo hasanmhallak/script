@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 Future<bool> sendPassportRequest(String cookies) async {
   print('prepearing login payload..');
-  final passportPayload = {
+  final passportPayload = jsonEncode({
     "ALIAS": "OPHRUHvKso",
     "P_USERNAME": "WebSite",
     "P_ZCITYID": 16,
@@ -37,7 +37,7 @@ Future<bool> sendPassportRequest(String cookies) async {
     "P_PASSPORT_TYPE": "3",
     "P_MATE_COUNT": 0,
     "P_PASSPORT_KIND": "10"
-  };
+  });
 
   print('done!');
   print('prepearing login header..');
