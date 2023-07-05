@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 
 Future<bool> sendPassportRequest(String cookies) async {
-  print('prepearing login payload..');
+  print('prepearing payload..');
   final passportPayload = jsonEncode({
     "ALIAS": "OPHRUHvKso",
     "P_USERNAME": "WebSite",
@@ -39,8 +39,7 @@ Future<bool> sendPassportRequest(String cookies) async {
     "P_PASSPORT_KIND": "10"
   });
 
-  print('done!');
-  print('prepearing login header..');
+  print('prepearing header..');
   final reqHeaders = {
     'Accept': 'application/json, text/plain, */*',
     'Accept-Encoding': 'gzip, deflate, br',
@@ -52,7 +51,7 @@ Future<bool> sendPassportRequest(String cookies) async {
     'Sec-Fetch-Dest': 'empty',
     'Sec-Fetch-Mode': 'cors',
     'Sec-Fetch-Site': 'cross-site',
-    'Cookie': 'session=${cookies.split('=').last}',
+    'Cookie': cookies.trim(),
     'Host': 'api.ecscsy.com:8080',
     'Origin': 'https://ecsc.gov.sy',
     'Referer': 'https://ecsc.gov.sy/',
@@ -67,7 +66,6 @@ Future<bool> sendPassportRequest(String cookies) async {
     'sec-gpc': '1',
   };
 
-  print('done!');
   print('sending request..');
   try {
     final res = await http.post(

@@ -9,8 +9,6 @@ Future<String?> login() async {
     {"username": "07020067923", "password": "Soula1234!@#"},
   );
 
-  print('done!');
-  print(loginPayload);
   print('prepearing login header..');
   final loginHeaders = {
     "Accept": "application/json, text/plain, */*",
@@ -36,7 +34,6 @@ Future<String?> login() async {
     "sec-gpc": "1",
   };
 
-  print('done!');
   print('sending request..');
 
   try {
@@ -47,7 +44,8 @@ Future<String?> login() async {
     );
 
     if (res.statusCode == 200) {
-      return res.headers['set-cookie']!.split(';').first;
+      // return res.headers['set-cookie']!.split(';').first;
+      return res.headers['set-cookie'];
     } else {
       print('${res.statusCode}: ${res.reasonPhrase}');
       return null;
