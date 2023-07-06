@@ -37,11 +37,13 @@ Future<String?> login() async {
   print('sending request..');
 
   try {
-    final res = await http.post(
-      Uri.parse('https://api.ecscsy.com:8080/secure/auth/login'),
-      headers: loginHeaders,
-      body: loginPayload,
-    );
+    final res = await http
+        .post(
+          Uri.parse('https://api.ecscsy.com:8080/secure/auth/login'),
+          headers: loginHeaders,
+          body: loginPayload,
+        )
+        .timeout(Duration(seconds: 10));
 
     if (res.statusCode == 200) {
       return res.headers['set-cookie']!.split(';').first;

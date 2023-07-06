@@ -67,11 +67,13 @@ Future<bool> sendPassportRequest(String cookies) async {
 
   print('sending request..');
   try {
-    final res = await http.post(
-      Uri.parse('https://api.ecscsy.com:8080/dbm/db/execute'),
-      headers: reqHeaders,
-      body: passportPayload,
-    );
+    final res = await http
+        .post(
+          Uri.parse('https://api.ecscsy.com:8080/dbm/db/execute'),
+          headers: reqHeaders,
+          body: passportPayload,
+        )
+        .timeout(Duration(seconds: 10));
 
     if (res.statusCode == 200) {
       print(res.body);
