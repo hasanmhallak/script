@@ -73,7 +73,7 @@ Future<bool> sendPassportRequest(String cookies) async {
           headers: reqHeaders,
           body: passportPayload,
         )
-        .timeout(Duration(seconds: 10));
+        .timeout(Duration(seconds: 5));
 
     if (res.statusCode == 200) {
       print(res.body);

@@ -43,7 +43,7 @@ Future<String?> login() async {
           headers: loginHeaders,
           body: loginPayload,
         )
-        .timeout(Duration(seconds: 10));
+        .timeout(Duration(seconds: 5));
 
     if (res.statusCode == 200) {
       return res.headers['set-cookie']!.split(';').first;
