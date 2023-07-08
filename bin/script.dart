@@ -4,12 +4,7 @@ import 'package:script/login.dart' as script;
 import 'package:script/send_passport_request.dart';
 
 void main(List<String> arguments) async {
-  await Future.wait([
-    start(int.parse(arguments.first)),
-    start(int.parse(arguments.first)),
-    start(int.parse(arguments.first)),
-    start(int.parse(arguments.first)),
-  ]);
+  await start(int.parse(arguments.first));
 }
 
 Future<void> start(int sleepInMilliseconds) async {
