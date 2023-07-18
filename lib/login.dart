@@ -6,7 +6,7 @@ Future<String?> login() async {
   print('started.');
   print('prepearing login payload..');
   final loginPayload = jsonEncode(
-    {"username": "07020067923", "password": "Soula1234!@#"},
+    {"username": "07020067923", "password": "Sola1234!@"},
   );
 
   print('prepearing login header..');
