@@ -15,7 +15,7 @@ Future<String?> login() async {
     "Accept-Encoding": "gzip, deflate, br",
     "Accept-Language": "en-US,en;q=0.9",
     "Connection": "keep-alive",
-    "Content-Length": "52",
+    "Content-Length": "50",
     "Content-Type": "application/json",
     "Host": "api.ecscsy.com:8080",
     'Sec-Fetch-Dest': 'empty',
