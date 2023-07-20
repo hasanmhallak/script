@@ -4,39 +4,39 @@ import 'package:http/http.dart' as http;
 Future<bool> sendPassportRequest(String cookies) async {
   print('prepearing payload..');
   final passportPayload = jsonEncode({
-    "ALIAS": "OPHRUHvKso",
-    "P_USERNAME": "WebSite",
-    "P_ZCITYID": 16,
-    "P_ZTOWNID": 17107755,
-    "P_ZSIDEID": null,
-    "P_ZPROCESSID": 18123129,
-    "P_FNAME": "محمد حسام",
-    "P_LNAME": "حلاق",
-    "P_FATHER": "محمود",
-    "P_MOTHER": "حلا",
-    "P_COPIES": 1,
-    "P_SYRIAID": "07020067923",
-    "P_BIRTH_PLACE": "سراقب",
-    "P_BIRTH_DATE": "1999-05-18",
-    "P_REGISTNO": "840",
-    "P_IDDOCNO": "",
-    "P_CENTERID": 60739316,
-    "P_MOBILE": "0965225683",
-    "P_TEL": "0965225683",
-    "P_ADDR_GENERAL": null,
-    "P_D_METHOD": "1",
-    "P_D_ADDRESS": null,
-    "P_ADD_ZCITYID": 16,
-    "P_ADD_ZTOWNID": 17107755,
-    "P_ADD_AREA": "",
-    "P_ADD_NAH": "",
-    "P_ADD_VILLAGE": "",
-    "P_ADD_POST_OFFICE": null,
-    "P_LEGALID": null,
-    "P_PASSPORT_TYPE": "3",
-    "P_MATE_COUNT": 0,
-    "P_PASSPORT_KIND": "10"
-  });
+  "ALIAS": "OPHRUHvKso",
+  "P_USERNAME": "WebSite",
+  "P_ZCITYID": 10,
+  "P_ZTOWNID": 16915349,
+  "P_ZSIDEID": null,
+  "P_ZPROCESSID": 18123129,
+  "P_FNAME": "محمد حسام",
+  "P_LNAME": "حلاق",
+  "P_FATHER": "محمود",
+  "P_MOTHER": "حلا",
+  "P_COPIES": 1,
+  "P_SYRIAID": "07020067923",
+  "P_BIRTH_PLACE": "سراقب",
+  "P_BIRTH_DATE": "1999-05-18",
+  "P_REGISTNO": "840",
+  "P_IDDOCNO": "",
+  "P_CENTERID": 60739320,
+  "P_MOBILE": "0965225683",
+  "P_TEL": "0965225683",
+  "P_ADDR_GENERAL": null,
+  "P_D_METHOD": "1",
+  "P_D_ADDRESS": null,
+  "P_ADD_ZCITYID": 10,
+  "P_ADD_ZTOWNID": 16915349,
+  "P_ADD_AREA": "",
+  "P_ADD_NAH": "",
+  "P_ADD_VILLAGE": "",
+  "P_ADD_POST_OFFICE": null,
+  "P_LEGALID": null,
+  "P_PASSPORT_TYPE": "3",
+  "P_MATE_COUNT": 0,
+  "P_PASSPORT_KIND": "10"
+});
 
   print('prepearing header..');
   final reqHeaders = {
@@ -89,3 +89,83 @@ Future<bool> sendPassportRequest(String cookies) async {
     return false;
   }
 }
+
+/*
+// tartuse
+{
+  "ALIAS": "OPHRUHvKso",
+  "P_USERNAME": "WebSite",
+  "P_ZCITYID": 10,
+  "P_ZTOWNID": 16915349,
+  "P_ZSIDEID": null,
+  "P_ZPROCESSID": 18123129,
+  "P_FNAME": "محمد حسام",
+  "P_LNAME": "حلاق",
+  "P_FATHER": "محمود",
+  "P_MOTHER": "حلا",
+  "P_COPIES": 1,
+  "P_SYRIAID": "07020067923",
+  "P_BIRTH_PLACE": "سراقب",
+  "P_BIRTH_DATE": "1999-05-18",
+  "P_REGISTNO": "840",
+  "P_IDDOCNO": "",
+  "P_CENTERID": 60739320,
+  "P_MOBILE": "0965225683",
+  "P_TEL": "0965225683",
+  "P_ADDR_GENERAL": null,
+  "P_D_METHOD": "1",
+  "P_D_ADDRESS": null,
+  "P_ADD_ZCITYID": 10,
+  "P_ADD_ZTOWNID": 16915349,
+  "P_ADD_AREA": "",
+  "P_ADD_NAH": "",
+  "P_ADD_VILLAGE": "",
+  "P_ADD_POST_OFFICE": null,
+  "P_LEGALID": null,
+  "P_PASSPORT_TYPE": "3",
+  "P_MATE_COUNT": 0,
+  "P_PASSPORT_KIND": "10"
+}
+
+
+
+
+Aleppo
+
+{
+    "ALIAS": "OPHRUHvKso",
+    "P_USERNAME": "WebSite",
+    "P_ZCITYID": 16,
+    "P_ZTOWNID": 17107755,
+    "P_ZSIDEID": null,
+    "P_ZPROCESSID": 18123129,
+    "P_FNAME": "محمد حسام",
+    "P_LNAME": "حلاق",
+    "P_FATHER": "محمود",
+    "P_MOTHER": "حلا",
+    "P_COPIES": 1,
+    "P_SYRIAID": "07020067923",
+    "P_BIRTH_PLACE": "سراقب",
+    "P_BIRTH_DATE": "1999-05-18",
+    "P_REGISTNO": "840",
+    "P_IDDOCNO": "",
+    "P_CENTERID": 60739316,
+    "P_MOBILE": "0965225683",
+    "P_TEL": "0965225683",
+    "P_ADDR_GENERAL": null,
+    "P_D_METHOD": "1",
+    "P_D_ADDRESS": null,
+    "P_ADD_ZCITYID": 16,
+    "P_ADD_ZTOWNID": 17107755,
+    "P_ADD_AREA": "",
+    "P_ADD_NAH": "",
+    "P_ADD_VILLAGE": "",
+    "P_ADD_POST_OFFICE": null,
+    "P_LEGALID": null,
+    "P_PASSPORT_TYPE": "3",
+    "P_MATE_COUNT": 0,
+    "P_PASSPORT_KIND": "10"
+  }
+
+
+*/
