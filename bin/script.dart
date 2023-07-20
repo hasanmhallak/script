@@ -16,7 +16,7 @@ Future<void> start(int sleepInMilliseconds) async {
         () => start(sleepInMilliseconds));
     return;
   }
-  final isSuccess = await sendPassportRequest(cookies);
+  final isSuccess = await confirmTrx(cookies);
   if (isSuccess) exit(0);
   Timer(Duration(milliseconds: sleepInMilliseconds),
       () => start(sleepInMilliseconds));
