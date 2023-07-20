@@ -2,10 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 Future<bool> confirmTrx(String cookies) async {
-  print('prepearing payload..');
   final passportPayload = jsonEncode({"ALIAS":"OPMzqeNCAi","P_USERNAME":"WebSite","P_ID":"157344332","P_VERIFICATION_CODE":null});
-
-  print('prepearing header..');
   final reqHeaders = {
     'Accept': 'application/json, text/plain, */*',
     'Accept-Encoding': 'gzip, deflate, br',
@@ -32,7 +29,7 @@ Future<bool> confirmTrx(String cookies) async {
     'sec-gpc': '1',
   };
 
-  print('sending request..');
+  print('Confirm trx..');
   try {
     final res = await http
         .post(

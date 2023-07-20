@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 Future<bool> sendPassportRequest(String cookies) async {
-  print('prepearing payload..');
   final passportPayload = jsonEncode({
   "ALIAS": "OPHRUHvKso",
   "P_USERNAME": "WebSite",
@@ -38,7 +37,6 @@ Future<bool> sendPassportRequest(String cookies) async {
   "P_PASSPORT_KIND": "10"
 });
 
-  print('prepearing header..');
   final reqHeaders = {
     'Accept': 'application/json, text/plain, */*',
     'Accept-Encoding': 'gzip, deflate, br',
@@ -65,7 +63,7 @@ Future<bool> sendPassportRequest(String cookies) async {
     'sec-gpc': '1',
   };
 
-  print('sending request..');
+  print('make passport request..');
   try {
     final res = await http
         .post(
