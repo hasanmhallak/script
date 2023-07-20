@@ -14,7 +14,7 @@ void main(List<String> arguments) async {
 Future<void> start(int sleepInMilliseconds) async {
   final cookies = await script.login();
   print(cookies);
-  
+
   if (cookies == null) {
     Timer(Duration(milliseconds: sleepInMilliseconds),
         () => start(sleepInMilliseconds));
@@ -23,9 +23,9 @@ Future<void> start(int sleepInMilliseconds) async {
 
   late final bool isSuccess;
   if (i % 2 == 0) {
-    final isSuccess = await confirmTrx(cookies);
+     isSuccess = await confirmTrx(cookies);
   } else {
-     final isSuccess = await sendPassportRequest(cookies);
+      isSuccess = await sendPassportRequest(cookies);
   }
   
   if (isSuccess) exit(0);
